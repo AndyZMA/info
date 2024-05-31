@@ -56,7 +56,6 @@ p {
     margin-bottom: 10px;
 }
 
-
 .service-list {
     list-style-type: none;
     padding: 0;
@@ -73,7 +72,6 @@ p {
     width: 24px; /* Ajusta el tamaño según tus necesidades */
     height: 24px;
 }
-
 
 .btn-primary {
     background-color: #D1001F;
@@ -211,6 +209,86 @@ p {
 .dropdown-menu a:hover {
     background-color: #FF0000;
     color: white;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Color de fondo del contenedor de las tarjetas */
+    margin-top: 20px; /* Espacio entre las tarjetas y la navbar inferior */
+    text-align: center; /* Centra el texto del título */
+}
+
+.text-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.cards-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    width: 200px; /* Ancho de cada tarjeta */
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo de cada tarjeta */
+    color: black; /* Establece un color de texto inicial */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Alinea el texto y la imagen al centro */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para todos los cambios en hover */
+    margin: 10px; /* Añade margen entre las tarjetas */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Animación de la tarjeta */
+    background-color: #FF0000; /* Cambio de color de fondo en hover */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más prominente en hover */
+}
+
+.card img {
+    width: 50px; /* Ajusta este valor según el tamaño deseado de las imágenes */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.card p {
+    font-size: 14px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina los márgenes por defecto */
+}
+
+/* Estilos para centrar imágenes en image-movement */
+.image-movement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura ajustada para un buen espacio de renderización */
+    overflow: hidden;
+    background-color: #f0f0f0; /* Color de fondo opcional */
+}
+
+.image-movement img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* Media Queries para responsividad */
