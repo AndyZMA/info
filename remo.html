@@ -11,7 +11,7 @@
     <!-- Navbar Principal -->
     <div class="navbar">
         <div class="logo">
-            <a href="">
+            <a href="index.html">
                 <img src="./assets/img/infonavit.png" alt="Infonavit">
             </a>
         </div>
@@ -58,36 +58,68 @@
         <center>
             <h1>¿En qué consiste?</h1>
         </center>
-        <p>Esta iniciativa del Gobierno de la República permite a las personas inscritas en el programa, acceder a los diferentes beneficios de ser formal: ahorrar y obtener los rendimientos que se generen de la Subcuenta de Vivienda, cuyo saldo el trabajador podrá usar para ejercer su crédito Infonavit (siempre y cuando cuente con una relación laboral vigente y que su empleador esté inscrito en el programa), o para disponer del saldo, ya sea antes o al momento de su retiro.</p>
+        <p>
+            Este programa del Gobierno de la República permite a los trabajadores que cotizan o han cotizado para el seguro social y han generado ahorros en su cuenta de Afore y en la subcuenta de vivienda, acceder a retirar una parte de estos ahorros para realizar construcciones menores en su vivienda o remodelarla.
+        </p>
         
         <div class="services-section">
             <img src="assets/img/personas.png" alt="Servicios Crezcamos Juntos">
             <div class="services-info">
-                <h2>Mis servicios Crezcamos Juntos</h2>
+                <h2>¿Qué puedo hacer en mi casa con este programa?</h2>
                 <ul class="service-list">
                     <li>
                         <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
-                        Consultar y actualizar tus datos de contacto.
+                        Demolición de concreto, losa o muros.
                     </li>
                     <li>
                         <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
-                        Consultar y modificar tu cuota de aportación.
+                        Suministro y colocación de accesorios eléctricos, focos, contactos, medidores, etc.
                     </li>
                     <li>
                         <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
-                        Obtener tu ficha de pago.
+                        Instalación hidráulica de conexión de la red municipal a la cisterna.
                     </li>
                     <li>
                         <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
-                        Consultar tu ahorro y el historial de aportaciones.
+                        Pintura en muros, plafones, barandales y rejas.
                     </li>
+
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Instalación de puertas y ventanas de aluminio o herrería.
+                    </li>
+
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Colocación de muebles de baño (Incluye la instalación hidráulica y tuberías). 
+                    </li>
+
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Aplanado fino con pasta o yeso.
+                    </li>
+
                 </ul>
-                <button class="btn-primary">Consulta aquí</button>
-                <button class="btn-primary">Tengo un tramite</button>
-                <p>Regístrate al Régimen de Incorporación Fiscal y podrás afiliarte al IMSS y al Infonavit a través de un patrón. <a href="https://login.siat.sat.gob.mx/nidp/idff/sso?id=mat-ptsc-totp&sid=1&option=credential&sid=1">Entérate</a></p>
-                <a href="#" class="register-link">Inscríbete ya y sé formal</a>
+                <a href="form.html">
+                    <button class="btn-primary">Solicitar mi retiro</button>
+                </a>
+                <button class="btn-primary">Consultar mi trámite</button>
             </div>
         </div>
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            dropdownToggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function() {
+                    const dropdownMenu = this.nextElementSibling;
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>

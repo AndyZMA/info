@@ -36,7 +36,7 @@
                     <a href="#">Quiero construir</a>
                     <a href="#">Quiero remodelar</a>
                     <a href="#">Quiero pagar mi deuda</a>
-                    <a href="remo.html">Trámite de remodelación</a>
+                    <a href="remo.html">Retiro parcial</a>
                     <a href="#">Cuenta Infonavit + Crédito Bancario</a>
                     <a href="#">Quiero comprar terreno</a>
                 </div>
@@ -79,7 +79,15 @@
             </div>
         </div>
     </div>
-        
+
+    <!-- Chat Icon and Window -->
+    <div class="chat-icon" id="chatIcon">
+        <img src="./assets/icons/chat.png" alt="Chat Icon">
+    </div>
+    <div class="chat-window" id="chatWindow">
+        <p>Cargando asistente virtual...</p>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
@@ -109,6 +117,14 @@
 
             const imageMovementDiv = document.querySelector('.image-movement');
             imageMovementDiv.addEventListener('mouseover', nextImage);
+
+            // Chat Icon functionality
+            const chatIcon = document.getElementById('chatIcon');
+            const chatWindow = document.getElementById('chatWindow');
+
+            chatIcon.addEventListener('click', function() {
+                chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
+            });
         });
     </script>
 </body>
