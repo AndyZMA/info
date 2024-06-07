@@ -8,23 +8,25 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
+
     <!-- Navbar Principal -->
     <div class="navbar">
         <div class="logo">
-            <a href="index.html">
+            <a href="#">
                 <img src="./assets/img/infonavit.png" alt="Infonavit">
             </a>
         </div>
-        <div class="menu-items">
+        <div class="menu-items desktop-only">
             <a href="#">Derechohabientes</a>
             <a href="#">Patrones</a>
             <a href="#">El Instituto</a>
         </div>
-        <button class="login-button"><a href="https://micuenta.infonavit.org.mx/" class="login-button">Acceder a Mi Cuenta Infonavit</a></button>
+        <button class="login-button desktop-only"><a href="https://micuenta.infonavit.org.mx/" class="login-button">Acceder a Mi Cuenta Infonavit</a></button>
+        <button class="menu-button mobile-only" id="menuButton"><img src="./assets/icons/manage_searchRed.png" alt="Menu Icon"></button>
     </div>
 
-    <!-- Navbar Inferior -->
-    <nav class="navbar-lower">
+    <!-- Navbar Inferior para Desktop -->
+    <nav class="navbar-lower desktop-only">
         <ul class="navbar-nav">
             <li class="nav-item">
                 <div class="dropdown-toggle">
@@ -36,23 +38,95 @@
                     <a href="#">Quiero construir</a>
                     <a href="#">Quiero remodelar</a>
                     <a href="#">Quiero pagar mi deuda</a>
-                    <a href="remo.html">Trámite de remodelación</a>
-                    <a href="#">Cuenta Infonavit + Crédito Bancario</a>
+                    <a href="remo.html">Retiro parcial</a>
                     <a href="#">Quiero comprar terreno</a>
                 </div>
             </li>
             <li class="nav-item">
                 <div class="dropdown-toggle">
                     <a href="#">Tengo un crédito</a>
+                    <img src="assets/icons/arrow_down.png" alt="Menu">
                 </div>
                 <div class="dropdown-menu">
-                    <!-- Añadir opciones aquí -->
+                    <a href="#">Soluciones para ti</a>
+                    <a href="#">Agentes de Cobranza</a>
+                    <a href="#">Seguro de daños </a>
+                    <a href="#">Pagos</a>
+                    <a href="#">Devolución de Pago</a>
                 </div>
             </li>
-            <li class="nav-item"><a href="#">Mi ahorro</a></li>
-            <li class="nav-item"><a href="#">Centro de Ayuda</a></li>
+            <li class="nav-item">
+                <div class="dropdown-toggle">
+                    <a href="#">Mi ahorro</a>
+                    <img src="assets/icons/arrow_down.png" alt="Menu">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="#">Aportaciones</a>
+                    <a href="#">Pagos en proceso</a>
+                    <a href="remo.html">Retiro de mi ahorro</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown-toggle">
+                    <a href="#">Centro de Ayuda</a>
+                    <img src="assets/icons/arrow_down.png" alt="Menu">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="#">Mi Ahorro</a>
+                    <a href="#">Aportaciones a mi crédito</a>
+                    <a href="#">Quiero un crédito</a>
+                </div>
+            </li>
         </ul>
     </nav>
+
+    <!-- Navbar Inferior para Móviles -->
+    <nav class="navbar-lower mobile-only" id="navbarLower">
+        <div class="menu-section">
+            <div class="menu-title">Quiero un crédito</div>
+            <div class="menu-items">
+                <a href="#">Quiero comprar</a>
+                <a href="#">Quiero construir</a>
+                <a href="#">Quiero remodelar</a>
+                <a href="#">Quiero pagar mi deuda</a>
+                <a href="#">Crezcamos juntos</a>
+                <a href="#">Cuenta Infonavit + Crédito Bancario</a>
+                <a href="#">Quiero comprar terreno</a>
+            </div>
+        </div>
+        <div class="menu-section">
+            <div class="menu-title">Tengo un crédito</div>
+            <div class="menu-items">
+                <a href="#">Soluciones para ti</a>
+                <a href="#">Agentes de Cobranza Extrajudicial</a>
+                <a href="#">Seguro de daños por siniestro</a>
+                <a href="#">Pagos</a>
+                <a href="#">Devolución de Pago a Beneficiarios</a>
+            </div>
+        </div>
+        <div class="menu-section">
+            <div class="menu-title">Mi ahorro</div>
+            <div class="menu-items">
+                <a href="#">Aportaciones extraordinarias</a>
+                <a href="#">Pagos en proceso aclaratorio</a>
+                <a href="remo.html">Retiro de mi ahorro</a>
+            </div>
+        </div>
+        <div class="menu-section">
+            <div class="menu-title">Centro de Ayuda</div>
+            <div class="menu-items">
+                <a href="#">Mi Ahorro</a>
+                <a href="#">Aportaciones a mi crédito</a>
+                <a href="#">Quiero un crédito</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="ahorro">
+        <img src="assets/img/ahorro.png" alt="">
+    </div>
 
     <div class="container">
         <center>
@@ -63,7 +137,7 @@
         </p>
         
         <div class="services-section">
-            <img src="assets/img/personas.png" alt="Servicios Crezcamos Juntos">
+            <img src="assets/img/casa.png" alt="Servicios Crezcamos Juntos">
             <div class="services-info">
                 <h2>¿Qué puedo hacer en mi casa con este programa?</h2>
                 <ul class="service-list">
@@ -109,17 +183,7 @@
     </div>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            dropdownToggles.forEach(function(toggle) {
-                toggle.addEventListener('click', function() {
-                    const dropdownMenu = this.nextElementSibling;
-                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-                });
-            });
-        });
-    </script>
+    <script src="assets/JS/main.js"></script>
 
 </body>
 </html>

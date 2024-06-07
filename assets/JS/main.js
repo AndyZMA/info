@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbarNav = document.querySelector('.navbar-nav');
-
-    menuToggle.addEventListener('click', function() {
-        navbarNav.classList.toggle('active');
-    });
-
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(function(toggle) {
         toggle.addEventListener('click', function() {
@@ -33,4 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const imageMovementDiv = document.querySelector('.image-movement');
     imageMovementDiv.addEventListener('mouseover', nextImage);
+
+    // Chat Icon functionality
+    const chatIcon = document.getElementById('chatIcon');
+    const chatWindow = document.getElementById('chatWindow');
+
+    chatIcon.addEventListener('click', function() {
+        chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+document.getElementById('menuButton').addEventListener('click', function() {
+    var navbarLower = document.getElementById('navbarLower');
+    if (navbarLower.classList.contains('open')) {
+        navbarLower.classList.remove('open');
+    } else {
+        navbarLower.classList.add('open');
+    }
 });
