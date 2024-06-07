@@ -9,118 +9,131 @@
 </head>
 <body>
 
-    <!-- Navbar Principal -->
-    <div class="navbar">
-        <div class="logo">
-            <a href="#">
-                <img src="./assets/img/infonavit.png" alt="Infonavit">
-            </a>
-        </div>
-        <div class="menu-items desktop-only">
-            <a href="#">Derechohabientes</a>
-            <a href="#">Patrones</a>
-            <a href="#">El Instituto</a>
-        </div>
-        <button class="login-button desktop-only"><a href="https://micuenta.infonavit.org.mx/" class="login-button">Acceder a Mi Cuenta Infonavit</a></button>
-        <button class="menu-button mobile-only" id="menuButton"><img src="./assets/icons/manage_searchRed.png" alt="Menu Icon"></button>
+<!-- Navbar Principal -->
+<div class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="./assets/img/infonavit.png" alt="Infonavit">
+        </a>
     </div>
+    <div class="menu-items desktop-only">
+        <a href="index.html">Derechohabientes</a>
+        <a href="https://portalmx.infonavit.org.mx/wps/portal/infonavitmx/mx2/patrones/!ut/p/z1/nZJBb4JAEIV_DccyswsuS29EjAINkYNI59JAgysJsgZpif9eDb00KUg6t5m8b-blZYAgA2ry70rlXaWbvL737yQ-ROAjk0vkGzd1UOCKR-toa4VvC9gPgjXiZmmzWKbSwyR2Yx4JK5CMA_2f56HnDPz4-ie8mMe7rm-zSCLfshgxSRPmB76DC7Tn8ThSHs70Px4QTa_fA02cGBKcFogfwVQGz1yEQKrWxfAwXlNYUgG15aFsy9b8au_jY9edL68GGtj3vam0VnVpfuqTgX8hR33pIPuthPNp96gMq-CFimt_A_LQaNk!/dz/d5/L2dBISEvZ0FBIS9nQSEh/">Patrones</a>
+        <a href="#">El Instituto</a>
+    </div>
+    <button class="login-button desktop-only"><a href="https://micuenta.infonavit.org.mx/" class="login-button">Acceder a Mi Cuenta Infonavit</a></button>
+    <button class="menu-button mobile-only" id="menuButton"><img src="./assets/icons/manage_searchRed.png" alt="Menu Icon"></button>
+</div>
 
-    <!-- Navbar Inferior para Desktop -->
-    <nav class="navbar-lower desktop-only">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <div class="dropdown-toggle">
-                    <a href="#">Quiero un crédito</a>
-                    <img src="./assets/icons/arrow_down.png" alt="Menu">
-                </div>
-                <div class="dropdown-menu">
-                    <a href="#">Quiero comprar</a>
-                    <a href="#">Quiero construir</a>
-                    <a href="#">Quiero remodelar</a>
-                    <a href="#">Quiero pagar mi deuda</a>
-                    <a href="remo.html">Retiro parcial</a>
-                    <a href="#">Quiero comprar terreno</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown-toggle">
-                    <a href="#">Tengo un crédito</a>
-                    <img src="assets/icons/arrow_down.png" alt="Menu">
-                </div>
-                <div class="dropdown-menu">
-                    <a href="#">Soluciones para ti</a>
-                    <a href="#">Agentes de Cobranza</a>
-                    <a href="#">Seguro de daños </a>
-                    <a href="#">Pagos</a>
-                    <a href="#">Devolución de Pago</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown-toggle">
-                    <a href="#">Mi ahorro</a>
-                    <img src="assets/icons/arrow_down.png" alt="Menu">
-                </div>
-                <div class="dropdown-menu">
-                    <a href="#">Aportaciones</a>
-                    <a href="#">Pagos en proceso</a>
-                    <a href="remo.html">Retiro de mi ahorro</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown-toggle">
-                    <a href="#">Centro de Ayuda</a>
-                    <img src="assets/icons/arrow_down.png" alt="Menu">
-                </div>
-                <div class="dropdown-menu">
-                    <a href="#">Mi Ahorro</a>
-                    <a href="#">Aportaciones a mi crédito</a>
-                    <a href="#">Quiero un crédito</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
+<!-- Menú desplegable para móviles -->
+<div class="mobile-dropdown mobile-only" id="mobileDropdown">
+    <div class="mobile-dropdown-toggle">
+        <span>Derechohabientes</span>
+        <img src="./assets/icons/keyboard_arrow.png" alt="Dropdown Icon" id="dropdownIcon">
+    </div>
+    <div class="mobile-dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Derechohabientes</a>
+        <a href="https://portalmx.infonavit.org.mx/wps/portal/infonavitmx/mx2/patrones/!ut/p/z1/nZJBb4JAEIV_DccyswsuS29EjAINkYNI59JAgysJsgZpif9eDb00KUg6t5m8b-blZYAgA2ry70rlXaWbvL737yQ-ROAjk0vkGzd1UOCKR-toa4VvC9gPgjXiZmmzWKbSwyR2Yx4JK5CMA_2f56HnDPz4-ie8mMe7rm-zSCLfshgxSRPmB76DC7Tn8ThSHs70Px4QTa_fA02cGBKcFogfwVQGz1yEQKrWxfAwXlNYUgG15aFsy9b8au_jY9edL68GGtj3vam0VnVpfuqTgX8hR33pIPuthPNp96gMq-CFimt_A_LQaNk!/dz/d5/L2dBISEvZ0FBIS9nQSEh/">Patrones</a>
+        <a href="https://portalmx.infonavit.org.mx/wps/portal/infonavitmx/mx2/el-instituto/el-infonavit/acerca_de_nosotros/!ut/p/z1/jZBBDoIwEEXP4gn6W2gpy4YKFmKBGCp2Y1gZEkUXxvNrJG6MArOb5L0_k088aYkfukd_6u79dejOr_3gxVEYDSoTMMolgzBunYa5C7IyIPsRyIBNElIrnVSobWxZIQKWK0H8Ej-OdUgLCVZRC9SuptroCBzhMh9_RmGZPwH46fg98eOJTwNllCaoUy52W1QAZzNAFXwDPzp8A1Mlzb15uzRN06I3vVo9AZzFkLc!/dz/d5/L2dBISEvZ0FBIS9nQSEh/">El Instituto</a>
+    </div>
+</div>
 
-    <!-- Navbar Inferior para Móviles -->
-    <nav class="navbar-lower mobile-only" id="navbarLower">
-        <div class="menu-section">
-            <div class="menu-title">Quiero un crédito</div>
-            <div class="menu-items">
+<!-- Navbar Inferior para Desktop -->
+<nav class="navbar-lower desktop-only">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <div class="dropdown-toggle">
+                <a href="#">Quiero un crédito</a>
+                <img src="./assets/icons/arrow_down.png" alt="Menu">
+            </div>
+            <div class="dropdown-menu">
                 <a href="#">Quiero comprar</a>
                 <a href="#">Quiero construir</a>
                 <a href="#">Quiero remodelar</a>
                 <a href="#">Quiero pagar mi deuda</a>
-                <a href="#">Crezcamos juntos</a>
-                <a href="#">Cuenta Infonavit + Crédito Bancario</a>
+                <a href="remo.html">Retiro parcial</a>
                 <a href="#">Quiero comprar terreno</a>
             </div>
-        </div>
-        <div class="menu-section">
-            <div class="menu-title">Tengo un crédito</div>
-            <div class="menu-items">
-                <a href="#">Soluciones para ti</a>
-                <a href="#">Agentes de Cobranza Extrajudicial</a>
-                <a href="#">Seguro de daños por siniestro</a>
-                <a href="#">Pagos</a>
-                <a href="#">Devolución de Pago a Beneficiarios</a>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown-toggle">
+                <a href="#">Tengo un crédito</a>
+                <img src="assets/icons/arrow_down.png" alt="Menu">
             </div>
-        </div>
-        <div class="menu-section">
-            <div class="menu-title">Mi ahorro</div>
-            <div class="menu-items">
-                <a href="#">Aportaciones extraordinarias</a>
-                <a href="#">Pagos en proceso aclaratorio</a>
+            <div class="dropdown-menu">
+                <a href="#">Soluciones para ti</a>
+                <a href="#">Agentes de Cobranza</a>
+                <a href="#">Seguro de daños </a>
+                <a href="#">Pagos</a>
+                <a href="#">Devolución de Pago</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown-toggle">
+                <a href="#">Mi ahorro</a>
+                <img src="assets/icons/arrow_down.png" alt="Menu">
+            </div>
+            <div class="dropdown-menu">
+                <a href="#">Aportaciones</a>
+                <a href="#">Pagos en proceso</a>
                 <a href="remo.html">Retiro de mi ahorro</a>
             </div>
-        </div>
-        <div class="menu-section">
-            <div class="menu-title">Centro de Ayuda</div>
-            <div class="menu-items">
+        </li>
+        <li class="nav-item">
+            <div class="dropdown-toggle">
+                <a href="#">Centro de Ayuda</a>
+                <img src="assets/icons/arrow_down.png" alt="Menu">
+            </div>
+            <div class="dropdown-menu">
                 <a href="#">Mi Ahorro</a>
                 <a href="#">Aportaciones a mi crédito</a>
                 <a href="#">Quiero un crédito</a>
             </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- Navbar Inferior para Móviles -->
+<nav class="navbar-lower mobile-only" id="navbarLower">
+    <div class="menu-section">
+        <div class="menu-title">Quiero un crédito</div>
+        <div class="menu-items">
+            <a href="#">Quiero comprar</a>
+            <a href="#">Quiero construir</a>
+            <a href="#">Quiero remodelar</a>
+            <a href="#">Quiero pagar mi deuda</a>
+            <a href="#">Crezcamos juntos</a>
+            <a href="#">Cuenta Infonavit + Crédito Bancario</a>
+            <a href="#">Quiero comprar terreno</a>
         </div>
-    </nav>
+    </div>
+    <div class="menu-section">
+        <div class="menu-title">Tengo un crédito</div>
+        <div class="menu-items">
+            <a href="#">Soluciones para ti</a>
+            <a href="#">Agentes de Cobranza Extrajudicial</a>
+            <a href="#">Seguro de daños por siniestro</a>
+            <a href="#">Pagos</a>
+            <a href="#">Devolución de Pago a Beneficiarios</a>
+        </div>
+    </div>
+    <div class="menu-section">
+        <div class="menu-title">Mi ahorro</div>
+        <div class="menu-items">
+            <a href="#">Aportaciones extraordinarias</a>
+            <a href="#">Pagos en proceso aclaratorio</a>
+            <a href="remo.html">Retiro de mi ahorro</a>
+        </div>
+    </div>
+    <div class="menu-section">
+        <div class="menu-title">Centro de Ayuda</div>
+        <div class="menu-items">
+            <a href="#">Mi Ahorro</a>
+            <a href="#">Aportaciones a mi crédito</a>
+            <a href="#">Quiero un crédito</a>
+        </div>
+    </div>
+</nav>
 
 
 
@@ -184,6 +197,26 @@
 
 
     <script src="assets/JS/main.js"></script>
+
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var navbarLower = document.getElementById('navbarLower');
+            if (navbarLower.classList.contains('open')) {
+                navbarLower.classList.remove('open');
+            } else {
+                navbarLower.classList.add('open');
+            }
+        });
+    
+        document.getElementById('dropdownIcon').addEventListener('click', function() {
+            var dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownMenu.classList.contains('open')) {
+                dropdownMenu.classList.remove('open');
+            } else {
+                dropdownMenu.classList.add('open');
+            }
+        });
+        </script>
 
 </body>
 </html>

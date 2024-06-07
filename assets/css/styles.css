@@ -196,6 +196,47 @@ p {
     display: none;
 }
 
+/* Menú desplegable para móviles */
+.mobile-dropdown {
+    background-color: #FFF;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mobile-dropdown-toggle img {
+    width: 20px;
+    height: auto;
+}
+
+.mobile-dropdown-menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.mobile-dropdown-menu.open {
+    display: flex;
+}
+
+.mobile-dropdown-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+.mobile-dropdown-menu a:first-child {
+    border-top: none;
+}
+
 /* Navbar Inferior para Desktop */
 .navbar-lower.desktop-only {
     display: flex;
