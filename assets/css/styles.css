@@ -1,3 +1,13 @@
+/* Incluir la fuente Geomanist-Regular */
+@font-face {
+    font-family: 'geomanistregular';
+    src: url('assets/fonts/geomanist-regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/geomanist-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos Generales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -80,7 +90,6 @@ p {
     height: auto;
 }
 
-
 .services-info {
     flex: 1;
 }
@@ -158,6 +167,9 @@ p {
     background-color: #FFFFFF;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .menu-items a {
@@ -262,7 +274,7 @@ p {
 
 .navbar-lower .nav-item a {
     text-decoration: none;
-    color: #666;
+    color: black; /* Color negro para los elementos de navbar-lower.desktop-only */
     font-size: 14px;
 }
 
@@ -378,9 +390,10 @@ p {
     align-items: center;
     position: relative;
     width: 100%;
-    height: 500px; /* Altura ajustada para un buen espacio de renderización */
+    height: 70vh; /* Altura ajustada para un buen espacio de renderización */
     overflow: hidden;
     background-color: #f0f0f0; /* Color de fondo opcional */
+    margin-top: 10px; /* Ajustar margen para reducir padding */
 }
 
 .image-movement img {
@@ -389,6 +402,10 @@ p {
     max-height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+}
+
+.image-movement img.active {
+    opacity: 1;
 }
 
 /* Estilos para las cards */
@@ -639,4 +656,40 @@ p {
     .navbar .login-button {
         display: none;
     }
+
+    .image-movement {
+        height: 50vh; /* Altura ajustada para la versión móvil */
+    }
+}
+
+/* Estilos para los elementos de la barra de navegación */
+.navbar .menu-items.desktop-only a,
+.navbar .menu-items.mobile-only a,
+.navbar .login-button,
+.navbar .dropdown-menu a,
+.navbar-lower .navbar-nav a,
+.navbar-lower .menu-items a {
+    font-family: 'geomanistregular', Arial, sans-serif;
+    font-weight: 700; /* Bold */
+    color: #818181 !important; /* Aseguramos que se aplique el color */
+}
+
+.navbar .login-button {
+    font-family: 'geomanistregular', Arial, sans-serif;
+    font-weight: 700; /* Bold */
+    color: white !important; /* Aseguramos que se aplique el color */
+}
+
+.navbar-lower.desktop-only .navbar-nav a,
+.navbar-lower.desktop-only .menu-items a {
+    font-family: 'geomanistregular', Arial, sans-serif;
+    font-weight: 700; /* Bold */
+    color: black !important; /* Aseguramos que se aplique el color */
+}
+
+.footer{
+    background-color: #818181;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    font-family: 'geomanistregular';
 }

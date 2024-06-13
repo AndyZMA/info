@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     dropdownToggles.forEach(function(toggle) {
         toggle.addEventListener('click', function() {
             const dropdownMenu = this.nextElementSibling;
+
+            // Cerrar otros menús desplegables abiertos
+            dropdownToggles.forEach(function(otherToggle) {
+                if (otherToggle !== toggle) {
+                    otherToggle.nextElementSibling.style.display = 'none';
+                }
+            });
+
             dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
         });
     });
@@ -41,21 +49,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Funcionalidad del menú para móviles
     const menuButton = document.getElementById('menuButton');
+    const searchButton = document.getElementById('searchButton');
+    const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+    function closeAllMobileMenus() {
+        mobileDropdownToggles.forEach(function(toggle) {
+            const dropdownMenu = toggle.nextElementSibling;
+            dropdownMenu.classList.remove('open');
+        });
+        const mobileSearch = document.getElementById('mobileSearch');
+        mobileSearch.classList.remove('open');
+    }
+
     if (menuButton) {
         menuButton.addEventListener('click', function() {
+            closeAllMobileMenus();
             const navbarLower = document.getElementById('navbarLower');
             navbarLower.classList.toggle('open');
         });
     }
 
-    // Funcionalidad del menú desplegable en móviles
-    const dropdownIcon = document.getElementById('dropdownIcon');
-    if (dropdownIcon) {
-        dropdownIcon.addEventListener('click', function() {
-            const dropdownMenu = document.getElementById('dropdownMenu');
-            dropdownMenu.classList.toggle('open');
+    if (searchButton) {
+        searchButton.addEventListener('click', function() {
+            closeAllMobileMenus();
+            const mobileSearch = document.getElementById('mobileSearch');
+            mobileSearch.classList.toggle('open');
         });
     }
+
+    mobileDropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            closeAllMobileMenus();
+            const dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle('open');
+        });
+    });
 
     // Validación del formulario
     const userForm = document.getElementById('userForm');
