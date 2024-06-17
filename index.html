@@ -176,5 +176,32 @@
 
 </footer>
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const chatWindow = document.getElementById('chatWindow');
+    const loadingText = document.createElement('div');
+    loadingText.className = 'loading-text';
+    loadingText.textContent = 'Cargando asistente virtual....';
+    chatWindow.appendChild(loadingText);
+
+    const welcomeText = document.createElement('div');
+    welcomeText.className = 'welcome-text';
+    welcomeText.textContent = 'Hola, ¿En qué puedo ayudarte?';
+    chatWindow.appendChild(welcomeText);
+
+    // Después de 3 segundos, inicia la animación para cambiar el texto
+    setTimeout(() => {
+        loadingText.style.animation = 'fadeOut 1s forwards';
+        setTimeout(() => {
+            loadingText.style.display = 'none';
+            welcomeText.style.opacity = '1';
+            welcomeText.style.animation = 'fadeIn 1s forwards';
+        }, 1000); // Espera a que termine la animación de fadeOut
+    }, 3000); // Tiempo de espera antes de iniciar la animación
+});
+
+</script>
+
 </body>
 </html>

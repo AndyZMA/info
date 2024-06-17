@@ -693,3 +693,33 @@ p {
     margin-top: 4rem;
     font-family: 'geomanistregular';
 }
+
+/* Animación para ocultar el texto "Cargando asistente virtual...." */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Animación para mostrar el texto "Hola, ¿En qué puedo ayudarte?" */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.chat-window .loading-text {
+    animation: fadeOut 1s forwards;
+}
+
+.chat-window .welcome-text {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
