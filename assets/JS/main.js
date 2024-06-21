@@ -16,6 +16,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Nuevo: Funcionalidad para abrir el menú al pasar el cursor en desktop
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            // Cerrar todos los menús
+            navItems.forEach(i => {
+                const dropdownMenu = i.querySelector('.dropdown-menu');
+                if (dropdownMenu) {
+                    dropdownMenu.style.display = 'none';
+                }
+            });
+            // Abrir el menú del elemento actual
+            const dropdownMenu = item.querySelector('.dropdown-menu');
+            if (dropdownMenu) {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+    });
+
+    // Cerrar menús cuando el mouse sale de la navbar
+    document.querySelector('.navbar-lower').addEventListener('mouseleave', () => {
+        navItems.forEach(item => {
+            const dropdownMenu = item.querySelector('.dropdown-menu');
+            if (dropdownMenu) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    });
+
     // Funcionalidad para el cambio de imágenes en el carrusel
     let currentIndex = 0;
     const images = document.querySelectorAll('.image-movement img');

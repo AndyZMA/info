@@ -313,8 +313,20 @@ p {
 }
 
 .dropdown-menu a:hover {
-    background-color: #FF0000;
+    background-color: #6c6c66;
     color: white;
+}
+
+/* Mostrar el menú cuando el cursor está sobre .nav-item */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Asegurar que solo un menú esté abierto a la vez */
+.navbar-nav .nav-item .dropdown-menu {
+    position: absolute;
+    background-color: white;
+    z-index: 1000;
 }
 
 /* Navbar Inferior para Móviles */
@@ -722,4 +734,3 @@ p {
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
-
