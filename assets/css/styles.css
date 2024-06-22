@@ -87,7 +87,7 @@ p {
 
 .ahorro img {
     width: 100%;
-    height: auto;
+    height: 200%;
 }
 
 .services-info {
@@ -316,6 +316,24 @@ p {
     background-color: #6c6c66;
     color: white;
 }
+
+
+/* Agregar estilo para la línea roja */
+.dropdown-menu {
+    border-left: 3px solid red;
+    padding-left: 10px;
+}
+
+/* Opcionalmente, puedes ajustar el padding del menú desplegable */
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
 
 /* Mostrar el menú cuando el cursor está sobre .nav-item */
 .nav-item:hover .dropdown-menu {
