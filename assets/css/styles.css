@@ -11,6 +11,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    font-weight: normal;
 }
 
 /* Estilos para el icono de chat y la ventana emergente */
@@ -63,7 +64,7 @@ body {
 
 h1 {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: normal;
     color: #000;
 }
 
@@ -87,7 +88,7 @@ p {
 
 .ahorro img {
     width: 100%;
-    height: 200%;
+    height: auto;
 }
 
 .services-info {
@@ -97,6 +98,7 @@ p {
 .services-info h2 {
     font-size: 22px;
     color: #D1001F;
+    font-weight: normal;
 }
 
 .services-info ul {
@@ -138,6 +140,7 @@ p {
     text-decoration: none;
     display: inline-block;
     margin-bottom: 20px;
+    font-weight: normal;
 }
 
 .btn-primary:hover {
@@ -147,13 +150,14 @@ p {
 .services-info a {
     color: #D1001F;
     text-decoration: none;
+    font-weight: normal;
 }
 
 .register-link {
     display: block;
-    font-weight: bold;
     margin-top: 10px;
     font-size: 16px;
+    font-weight: normal;
 }
 
 .register-link:hover {
@@ -178,6 +182,7 @@ p {
     margin: 0 10px;
     font-size: 14px;
     padding: 5px 10px;
+    font-weight: normal;
 }
 
 .login-button {
@@ -190,6 +195,7 @@ p {
     cursor: pointer;
     text-decoration: none;
     margin-left: auto;
+    font-weight: normal;
 }
 
 .login-button:hover {
@@ -276,6 +282,7 @@ p {
     text-decoration: none;
     color: black; /* Color negro para los elementos de navbar-lower.desktop-only */
     font-size: 14px;
+    font-weight: normal;
 }
 
 .dropdown-toggle {
@@ -310,13 +317,13 @@ p {
     text-decoration: none;
     display: block;
     white-space: nowrap;
+    font-weight: normal;
 }
 
 .dropdown-menu a:hover {
     background-color: #6c6c66;
     color: white;
 }
-
 
 /* Agregar estilo para la línea roja */
 .dropdown-menu {
@@ -332,9 +339,6 @@ p {
     color: black;
 }
 
-
-
-
 /* Mostrar el menú cuando el cursor está sobre .nav-item */
 .nav-item:hover .dropdown-menu {
     display: block;
@@ -348,14 +352,15 @@ p {
 }
 
 /* Navbar Inferior para Móviles */
+/* Navbar Inferior para Móviles */
 .navbar-lower.mobile-only {
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #F8F8F8;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0; /* Ajuste de padding para mejorar la visualización */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-lower.open {
@@ -363,37 +368,47 @@ p {
 }
 
 .navbar-lower .menu-section {
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Ajuste del margen inferior */
+    width: 100%; /* Asegurar que todas las secciones tengan el mismo ancho */
 }
 
 .navbar-lower .menu-title {
     font-size: 18px;
-    font-weight: bold;
-    color: #D1001F;
-    margin-bottom: 10px;
+    color: white;
+    background-color: #D1001F; /* Fondo rojo para los títulos */
+    padding: 10px;
+    margin: 0; /* Elimina margen para que el fondo rojo abarque todo el ancho */
+    font-weight: normal;
+    text-align: center; /* Centra los títulos en rojo */
 }
 
 .navbar-lower .menu-items {
+    background-color: white; /* Fondo blanco para las opciones */
+    padding: 10px 20px; /* Ajuste del padding */
+    margin: 0 auto; /* Centrando los elementos */
+    width: 90%; /* Asegura que los elementos ocupen el ancho completo */
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centra los elementos dentro del contenedor */
+    min-height: 200px; /* Altura mínima para igualar las secciones */
 }
 
 .navbar-lower .menu-items a {
     color: black;
-    padding: 10px 15px;
+    padding: 10px 0; /* Ajuste del padding superior e inferior */
     text-decoration: none;
     display: block;
     white-space: nowrap;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    font-weight: normal;
+    text-align: left; /* Alinea el texto a la izquierda */
     transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre elementos */
+    width: 100%; /* Asegura que el enlace ocupe todo el ancho del contenedor */
 }
 
 .navbar-lower .menu-items a:hover {
-    background-color: #FF0000;
-    color: white;
+    background-color: #F5F5F5; /* Fondo gris claro al pasar el ratón */
 }
 
 /* Botón del Menú */
@@ -412,6 +427,13 @@ p {
     width: 35px;
     height: auto;
 }
+
+/* General adjustments for better appearance */
+.navbar-lower .menu-section:last-child .menu-title {
+    margin-bottom: 0; /* Elimina margen inferior del último título */
+}
+
+/*End Mobile version*/
 
 /* Estilos para centrar imágenes en image-movement */
 .image-movement {
@@ -451,7 +473,7 @@ p {
 
 .text-title {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 10px;
 }
 
@@ -478,6 +500,7 @@ p {
     text-align: center; /* Alinea el texto y la imagen al centro */
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para todos los cambios en hover */
     margin: 10px; /* Añade margen entre las tarjetas */
+    font-weight: normal;
 }
 
 .card:hover {
@@ -497,6 +520,7 @@ p {
     font-size: 14px; /* Tamaño del texto */
     color: #333; /* Color del texto */
     margin: 0; /* Elimina los márgenes por defecto */
+    font-weight: normal;
 }
 
 /* Estilos Generales del Formulario */
@@ -514,6 +538,7 @@ p {
     color: #D1001F;
     margin-bottom: 20px;
     font-size: 24px;
+    font-weight: normal;
 }
 
 .form-group {
@@ -526,6 +551,7 @@ p {
     margin-bottom: 5px;
     color: #333;
     font-size: 14px;
+    font-weight: normal;
 }
 
 .form-group input,
@@ -564,6 +590,7 @@ p {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-weight: normal;
 }
 
 .btn-submit:hover {
@@ -601,6 +628,7 @@ p {
     left: 10px;
     pointer-events: none;
     transition: transform 0.2s ease-in-out, font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-weight: normal;
 }
 
 .form-group input:focus ~ .bar:before,
@@ -700,20 +728,20 @@ p {
 .navbar-lower .navbar-nav a,
 .navbar-lower .menu-items a {
     font-family: 'geomanistregular', Arial, sans-serif;
-    font-weight: 700; /* Bold */
+    font-weight: normal;
     color: #818181 !important; /* Aseguramos que se aplique el color */
 }
 
 .navbar .login-button {
     font-family: 'geomanistregular', Arial, sans-serif;
-    font-weight: 700; /* Bold */
+    font-weight: normal;
     color: white !important; /* Aseguramos que se aplique el color */
 }
 
 .navbar-lower.desktop-only .navbar-nav a,
 .navbar-lower.desktop-only .menu-items a {
     font-family: 'geomanistregular', Arial, sans-serif;
-    font-weight: 700; /* Bold */
+    font-weight: normal;
     color: black !important; /* Aseguramos que se aplique el color */
 }
 
@@ -722,6 +750,7 @@ p {
     padding: 3rem 0;
     margin-top: 4rem;
     font-family: 'geomanistregular';
+    font-weight: normal;
 }
 
 /* Animación para ocultar el texto "Cargando asistente virtual...." */
