@@ -86,10 +86,26 @@ p {
     border-radius: 8px;
 }
 
+/* Estilos para la clase ahorro */
 .ahorro img {
     width: 100%;
     height: auto;
+    border-radius: 8px; /* Mantén los bordes redondeados */
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
 }
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .ahorro img {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        max-height: 400px; /* Altura máxima para la imagen */
+        object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    }
+}
+
 
 .services-info {
     flex: 1;
@@ -321,7 +337,7 @@ p {
 }
 
 .dropdown-menu a:hover {
-    background-color: #6c6c66;
+    background-color: #ECEAE9;
     color: white;
 }
 
