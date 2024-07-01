@@ -73,7 +73,7 @@ function handleOption(option) {
         addBotMessage("Claro, un asesor se pondrá en contacto contigo pronto.");
     } else if (option === "consultar") {
         addUserMessage("Quiero consultar un trámite");
-        addBotMessage("Por favor, ingresa los detalles de tu trámite para que podamos ayudarte.");
+        addBotMessage("Por favor, escríbenos a: ayuda@mi-tramite-infonavit.com, para verificar el estado de tu trámite");
         enableUserInput();
     }
 }
