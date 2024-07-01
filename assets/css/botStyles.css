@@ -1,0 +1,149 @@
+/* Incluir la fuente Geomanist-Regular */
+@font-face {
+    font-family: 'geomanistregular';
+    src: url('assets/fonts/geomanist-regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/geomanist-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos para el icono de chat y la ventana emergente */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #D1001F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.chat-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.chat-icon:hover {
+    background-color: #a8001a;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.chatbot {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    max-height: 100%;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.bot-message {
+    color: #ffffff;
+    background-color: #dc3545;
+    padding: 10px;
+    border-radius: 10px;
+    align-self: flex-start;
+}
+
+.user-message {
+    color: #333333;
+    background-color: #e9e9eb;
+    padding: 10px;
+    border-radius: 10px;
+    align-self: flex-end;
+}
+
+.user-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+#userMessage {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#sendButton {
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#sendButton:disabled {
+    background-color: #cccccc;
+}
+
+.chat-window .loading-text {
+    animation: fadeOut 1s forwards;
+}
+
+.chat-window .welcome-text {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Estilos para los botones de opciones */
+.chatbot-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chatbot-buttons button {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-buttons button:hover {
+    background-color: #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.chatbot-buttons button:active {
+    background-color: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

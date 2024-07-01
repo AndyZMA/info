@@ -66,15 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageMovementDiv = document.querySelector('.image-movement');
     imageMovementDiv.addEventListener('mouseover', nextImage);
 
-    // Funcionalidad del icono de chat
-    const chatIcon = document.getElementById('chatIcon');
-    const chatWindow = document.getElementById('chatWindow');
-
-    if (chatIcon && chatWindow) {
-        chatIcon.addEventListener('click', function() {
-            chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
-        });
-    }
+    
 
     // Funcionalidad del menú para móviles
     const menuButton = document.getElementById('menuButton');
