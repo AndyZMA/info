@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const chatIcon = document.getElementById('chatIcon');
     const chatWindow = document.getElementById('chatWindow');
-    const chatbotMessages = document.getElementById("chatbot-messages");
     const userMessageInput = document.getElementById("userMessage");
     const sendButton = document.getElementById("sendButton");
 
-    // Funcionalidad del icono de chat
     if (chatIcon && chatWindow) {
         chatIcon.addEventListener('click', function() {
             chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
             if (chatWindow.style.display === 'block') {
                 setTimeout(() => {
                     removeLoadingText();
+                    addWelcomeMessage();
                 }, 1000);
             }
         });
@@ -39,12 +38,36 @@ function removeLoadingText() {
         loadingText.style.animation = 'fadeOut 1s forwards';
         setTimeout(() => {
             loadingText.remove();
-            addBotMessage("Hola, ¿cómo puedo ayudarte hoy?");
-            setTimeout(() => {
-                addOptions();
-            }, 500); // Small delay to show the options after the greeting
         }, 1000);
     }
+}
+
+function addWelcomeMessage() {
+    addBotMessage("¡Hola! Soy AVI, el asistente virtual del Infonavit 😊. Puedo ayudarte a:");
+    addOptionButtons();
+}
+
+function addOptionButtons() {
+    const options = [
+        "Obtener un crédito",
+        "Conocer tu ahorro",
+        "Consultar el saldo de tu crédito",
+        "Solicitar un retiro",
+        "Consultar mi retiro",
+    ];
+
+    const buttonsContainer = document.createElement("div");
+    buttonsContainer.className = "chatbot-buttons";
+
+    options.forEach(option => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => handleOption(option);
+        buttonsContainer.appendChild(button);
+    });
+
+    document.getElementById("chatbot-messages").appendChild(buttonsContainer);
+    scrollToBottom();
 }
 
 function addBotMessage(message) {
@@ -63,42 +86,56 @@ function addUserMessage(message) {
     scrollToBottom();
 }
 
-function processUserMessage(message) {
-    // Add your own logic to process user message
-}
-
 function handleOption(option) {
-    if (option === "contactar") {
-        addUserMessage("Quiero contactar un asesor");
-        addBotMessage("Claro, un asesor se pondrá en contacto contigo pronto.");
-    } else if (option === "consultar") {
-        addUserMessage("Quiero consultar un trámite");
-        addBotMessage("Por favor, escríbenos a: ayuda@mi-tramite-infonavit.com, para verificar el estado de tu trámite");
-        enableUserInput();
+    addUserMessage(option);
+
+    if (option === "Obtener un crédito") {
+        addBotMessage(`
+            <b>Para obtener un crédito</b> Infonavit, debes tener en cuenta la variedad de productos que tenemos para ti, de acuerdo a tus necesidades como:
+            <ul>
+                <li>Comprar una Vivienda (nueva o existente) 🏠</li>
+                <li>Comprar un terreno 🌎</li>
+                <li>Construir/remodelar tu vivienda 🔨</li>
+                <li>Pagar una hipoteca (con alguna otra Institución) 🏦</li>
+                <li>Unir tu crédito (con alguien más) 👨‍👩‍👦‍👦</li>
+            </ul>
+        `);
+        addBotMessage(`
+            <b>Los requisitos principales son:</b>
+            <ul>
+                <li>Cotizar o haber cotizado al Infonavit</li>
+                <li>Realizar el curso en línea "Saber más, para decidir mejor"</li>
+                <li>Cumplir con la puntuación mínima requerida de 1080 puntos</li>
+                <li>Utilizar el simulador de crédito</li>
+            </ul>
+            <i>Consulta más información en este <a href="https://www.infonavit.org.mx">enlace</a>.</i>
+        `);
+        addBotMessage(`
+            <b>Regístrate o ingresa a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a></b> donde podrás realizar un ejercicio de precalificación y así saber el monto del crédito al que puedes ser susceptible y comenzar con el trámite de inscripción del crédito.
+        `);
+    } else if (option === "Conocer tu ahorro") {
+        addBotMessage(`
+            <b>Para consultar cuánto ahorro tienes en la Subcuenta de Vivienda</b>, ingresa o regístrate en <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a>, selecciona "Mi ahorro" y, en seguida, "Cuánto ahorro tengo". Una vez ahí, visualizarás el tipo de ahorro y la Cuenta en la cual está tu ahorro, período y el monto 💰.
+            <br>
+            <i>Consulta más información en este <a href="https://www.infonavit.org.mx">enlace</a>.</i>
+        `);
+    } else if(option === "Consultar el saldo de tu crédito") {
+        addBotMessage(`
+            <p>
+                Puedes<b>revisar tu estado de cuenta</b> y descargarlo, solo debes ingresar a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a> en la sección "Mi crédito"
+            </p>
+        `);
+    }else if(option === "Solicitar un retiro"){
+        addBotMessage(`
+            <p>
+                Puedes<b>solicitar un retiro</b>, ingresando a <a href="./form.html"></a> rellenando el formulario!"
+            </p>
+        `);
     }
-}
-
-function enableUserInput() {
-    document.getElementById("userMessage").disabled = false;
-    document.getElementById("sendButton").disabled = false;
-}
-
-function addOptions() {
-    const buttonsContainer = document.createElement("div");
-    buttonsContainer.className = "chatbot-buttons";
-
-    const contactButton = document.createElement("button");
-    contactButton.textContent = "Contactar un asesor";
-    contactButton.onclick = () => handleOption('contactar');
-    buttonsContainer.appendChild(contactButton);
-
-    const consultButton = document.createElement("button");
-    consultButton.textContent = "Consultar trámite";
-    consultButton.onclick = () => handleOption('consultar');
-    buttonsContainer.appendChild(consultButton);
-
-    document.getElementById("chatbot-messages").appendChild(buttonsContainer);
-    scrollToBottom();
+    
+    else{
+        addBotMessage(`Has seleccionado: ${option}`);
+    }
 }
 
 function scrollToBottom() {

@@ -1,4 +1,3 @@
-/* Incluir la fuente Geomanist-Regular */
 @font-face {
     font-family: 'geomanistregular';
     src: url('assets/fonts/geomanist-regular-webfont.woff2') format('woff2'),
@@ -7,7 +6,6 @@
     font-style: normal;
 }
 
-/* Estilos para el icono de chat y la ventana emergente */
 .chat-icon {
     position: fixed;
     bottom: 20px;
@@ -37,7 +35,7 @@
     position: fixed;
     bottom: 80px;
     right: 20px;
-    width: 300px;
+    width: 350px;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
@@ -58,6 +56,7 @@
     padding: 20px;
     overflow-y: auto;
     border-bottom: 1px solid #ddd;
+    max-height: 300px;
 }
 
 .message {
@@ -70,6 +69,7 @@
     padding: 10px;
     border-radius: 10px;
     align-self: flex-start;
+    max-width: 80%;
 }
 
 .user-message {
@@ -78,6 +78,7 @@
     padding: 10px;
     border-radius: 10px;
     align-self: flex-end;
+    max-width: 80%;
 }
 
 .user-input {
@@ -118,11 +119,11 @@
     animation: fadeIn 1s forwards;
 }
 
-/* Estilos para los botones de opciones */
 .chatbot-buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .chatbot-buttons button {
@@ -138,12 +139,43 @@
 }
 
 .chatbot-buttons button:hover {
-    background-color: #ddd;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    color: black;
+    background-color: #a8001a;
 }
 
 .chatbot-buttons button:active {
-    background-color: #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #a8001a;
+}
+
+
+/* Mantén tus estilos actuales y añade/ajusta los siguientes si es necesario */
+/* Mantén tus estilos actuales y añade/ajusta los siguientes si es necesario */
+
+.bot-message ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.bot-message li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+.bot-message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.bot-message a:hover {
+    text-decoration: underline;
+}
+
+.bot-message b {
+    display: block;
+    margin-top: 10px;
+}
+
+.bot-message i {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
 }
