@@ -87,24 +87,57 @@ p {
 }
 
 /* Estilos para la clase ahorro */
+/* Estilos para la clase ahorro */
+.ahorro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Estilo para la lista dentro del contenedor .ahorro */
+.ahorro ul {
+    flex: 1 1 60%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Asegurar que los elementos li no se desborden */
+.ahorro ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Estilo para la imagen dentro del contenedor .ahorro */
 .ahorro img {
-    width: 100%;
+    flex: 1 1 35%;
+    max-width: 100%;
     height: auto;
     border-radius: 8px; /* Mantén los bordes redondeados */
     display: block;
     margin: 0 auto; /* Centra la imagen horizontalmente */
+    object-fit: contain; /* Mantén la proporción sin recortar */
 }
 
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
+    .ahorro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ahorro ul, .ahorro img {
+        flex: 1 1 100%;
+    }
+
     .ahorro img {
-        width: 100%;
-        height: auto;
         margin: 20px 0;
         max-height: 400px; /* Altura máxima para la imagen */
-        object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+        object-fit: contain; /* Mantén la proporción sin recortar */
     }
 }
+
 
 
 .services-info {

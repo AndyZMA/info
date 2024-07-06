@@ -91,7 +91,7 @@ function handleOption(option) {
 
     if (option === "Obtener un crédito") {
         addBotMessage(`
-            <b>Para obtener un crédito</b> Infonavit, debes tener en cuenta la variedad de productos que tenemos para ti, de acuerdo a tus necesidades como:
+            <b>Para obtener un crédito Infonavit</b>, debes tener en cuenta la variedad de productos que tenemos para ti, de acuerdo a tus necesidades como:
             <ul>
                 <li>Comprar una Vivienda (nueva o existente) 🏠</li>
                 <li>Comprar un terreno 🌎</li>
@@ -108,7 +108,7 @@ function handleOption(option) {
                 <li>Cumplir con la puntuación mínima requerida de 1080 puntos</li>
                 <li>Utilizar el simulador de crédito</li>
             </ul>
-            <i>Consulta más información en este <a href="https://www.infonavit.org.mx">enlace</a>.</i>
+            <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
         addBotMessage(`
             <b>Regístrate o ingresa a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a></b> donde podrás realizar un ejercicio de precalificación y así saber el monto del crédito al que puedes ser susceptible y comenzar con el trámite de inscripción del crédito.
@@ -117,7 +117,7 @@ function handleOption(option) {
         addBotMessage(`
             <b>Para consultar cuánto ahorro tienes en la Subcuenta de Vivienda</b>, ingresa o regístrate en <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a>, selecciona "Mi ahorro" y, en seguida, "Cuánto ahorro tengo". Una vez ahí, visualizarás el tipo de ahorro y la Cuenta en la cual está tu ahorro, período y el monto 💰.
             <br>
-            <i>Consulta más información en este <a href="https://www.infonavit.org.mx">enlace</a>.</i>
+            <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
     } else if(option === "Consultar el saldo de tu crédito") {
         addBotMessage(`
@@ -127,15 +127,18 @@ function handleOption(option) {
         `);
     }else if(option === "Solicitar un retiro"){
         addBotMessage(`
-            <p>
-                Puedes<b>solicitar un retiro</b>, ingresando a <a href="./form.html"></a> rellenando el formulario!"
-            </p>
+            <b>Para solicitar un retiro</b>, ingresa o regístrate en <a href="form.html">este enlace</a> y rellenando el formulario! 💰.
+            <br>
+            <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
-    }
-    
-    else{
-        addBotMessage(`Has seleccionado: ${option}`);
-    }
+    }else if(option === "Consultar mi retiro")
+        addBotMessage(`
+
+
+            <b>Para verificar el estatus de tu retiro</b>, ingresa tus datos en <a href="tramite.html">este enlace</a> y rellenando el formulario! 💰.
+            <br>
+            <i>Consulta más información en este <a href="">enlace</a>.</i>
+        `);
 }
 
 function scrollToBottom() {
