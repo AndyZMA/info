@@ -86,7 +86,17 @@ function addUserMessage(message) {
     scrollToBottom();
 }
 
+let firstSelection = true;
+
 function handleOption(option) {
+    const chatbotMessages = document.getElementById("chatbot-messages");
+
+    if (!firstSelection) {
+        chatbotMessages.innerHTML = "";  // Limpiar el contenido anterior si no es la primera selección
+    } else {
+        firstSelection = false;  // Marcar que ya hubo una selección
+    }
+
     addUserMessage(option);
 
     if (option === "Obtener un crédito") {
@@ -122,23 +132,24 @@ function handleOption(option) {
     } else if(option === "Consultar el saldo de tu crédito") {
         addBotMessage(`
             <p>
-                Puedes<b>revisar tu estado de cuenta</b> y descargarlo, solo debes ingresar a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a> en la sección "Mi crédito"
+                Puedes <b>revisar tu estado de cuenta</b> y descargarlo, solo debes ingresar a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a> en la sección "Mi crédito"
             </p>
         `);
-    }else if(option === "Solicitar un retiro"){
+    } else if(option === "Solicitar un retiro"){
         addBotMessage(`
-            <b>Para solicitar un retiro</b>, ingresa o regístrate en <a href="form.html">este enlace</a> y rellenando el formulario! 💰.
+            <b>Para solicitar un retiro</b>, ingresa o regístrate en <a href="form.html">este enlace</a> y rellena el formulario! 💰.
             <br>
             <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
-    }else if(option === "Consultar mi retiro")
+    } else if(option === "Consultar mi retiro") {
         addBotMessage(`
-
-
-            <b>Para verificar el estatus de tu retiro</b>, ingresa tus datos en <a href="tramite.html">este enlace</a> y rellenando el formulario! 💰.
+            <b>Para verificar el estatus de tu retiro</b>, ingresa tus datos en <a href="tramite.html">este enlace</a> y rellena el formulario! 💰.
             <br>
             <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
+    }
+
+    addOptionButtons();  // Volver a mostrar el menú de opciones
 }
 
 function scrollToBottom() {

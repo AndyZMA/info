@@ -7,6 +7,8 @@
     <title>Retiro de mi ahorro</title>
     <link rel="icon" href="./assets/img/infonavit.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/botStyles.css">
+
 
    
     <style>
@@ -301,7 +303,7 @@
                 <br><br> 
                 Para tramitarlo, solo debes ingresar al servicio de <b class="fondoText" style="color: red;">Devolución del saldo de la Subcuenta de Vivienda</b> y seguir las indicaciones.
                 <br><br>
-                En caso de que no seas beneficiario[a] legal [cónyuge, descendiente, ascendiente o concubino[a]], y que no cuentes con dictamen de pensión del titular finado(a), para que acredites que eres beneficiario[a], puedes presentar una <b style="color: dimgrey;">resolución de designación de beneficiarios</b> emitida por los Tribunales federales en materia laboral.
+                En caso de que no seas beneficiario(a) legal (cónyuge, descendiente, ascendiente o concubino(a)), y que no cuentes con dictamen de pensión del titular finado(a), para que acredites que eres beneficiario(a), puedes presentar una <b style="color: dimgrey;">resolución de designación de beneficiarios</b> emitida por los Tribunales federales en materia laboral.
                 Consulta más información.
                 ¡Recuerda que todos nuestros trámites y servicios son gratuitos!
                 
@@ -314,10 +316,41 @@
     </div>
 
 
-    
+    <!-- Chat Icon and Window -->
+<div class="chat-icon" id="chatIcon">
+    <img src="./assets/icons/chat.png" alt="Chat Icon">
+</div>
+<div class="chat-window" id="chatWindow" style="display: none;">
+    <div class="chatbot">
+        <div id="chatbot-messages" class="chatbot-messages">
+            <div class="loading-text">Cargando asistente virtual...</div>
+        </div>
+        <div id="user-input" class="user-input">
+            <input type="text" id="userMessage" placeholder="Escribe tu mensaje...">
+            <button id="sendButton">Enviar</button>
+        </div>
+    </div>
+</div>
 
 
     <script src="assets/JS/main.js"></script>
+    <script src="assets/JS/bot.js"></script>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <center>
+    
+                    <p>Derechos reservados © Infonavit 2017</p>
+                </center>
+            </div>
+            <div class="footer-right">
+                <img src="assets/icons/infonavit_W.png" alt="" class="social-icon">
+    
+            </div>
+        </div>
+    </footer>
 
     <script>
         document.getElementById('menuButton').addEventListener('click', function() {
