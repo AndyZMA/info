@@ -149,7 +149,8 @@ function handleOption(option) {
         `);
     }
 
-    addOptionButtons();  // Volver a mostrar el menú de opciones
+    scrollToBottom();  // Asegurar que el último mensaje sea visible
+    setTimeout(addOptionButtons, 500);  // Mostrar el menú de opciones después de un breve retraso
 }
 
 function scrollToBottom() {
