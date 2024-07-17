@@ -559,6 +559,10 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más prominente en hover */
 }
 
+.card:hover p, .card:hover img, .card:hover .text-title, .card:hover .text-subtitle, .card:hover .textoSub {
+    color: white; /* Cambia el color del texto a blanco al hacer hover */
+}
+
 .card img {
     width: 50px; /* Ajusta este valor según el tamaño deseado de las imágenes */
     height: auto;
@@ -571,6 +575,17 @@ p {
     margin: 0; /* Elimina los márgenes por defecto */
     font-weight: normal;
 }
+
+/* Estilos para la clase textoSub */
+.textoSub {
+    color: red; /* Mantiene el color rojo inicial */
+}
+
+.textoSub:hover {
+    color: white; /* Cambia el color a blanco al hacer hover */
+}
+
+
 
 /* Estilos Generales del Formulario */
 .form-container {
