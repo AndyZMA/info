@@ -150,7 +150,7 @@ function handleOption(option) {
     }
 
     scrollToBottom();  // Asegurar que el último mensaje sea visible
-    setTimeout(addOptionButtons, 500);  // Mostrar el menú de opciones después de un breve retraso
+    setTimeout(addOptionButtons, 7000);  // Mostrar el menú de opciones después de un breve retraso
 }
 
 function scrollToBottom() {
