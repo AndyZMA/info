@@ -510,6 +510,7 @@ p {
 }
 
 /* Estilos para las cards */
+/* Estilos para las cards */
 .cards-container {
     display: flex;
     flex-direction: column;
@@ -534,14 +535,15 @@ p {
 
 .cards-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Asegura que las tarjetas estén centradas */
     width: 100%;
     max-width: 1200px;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples filas si es necesario */
 }
 
 .card {
-    width: 200px; /* Ancho de cada tarjeta */
-    padding: 20px;
+    width: 150px; /* Ancho de cada tarjeta */
+    padding: 10px;
     background-color: #ffffff; /* Color de fondo de cada tarjeta */
     color: black; /* Establece un color de texto inicial */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
@@ -584,6 +586,53 @@ p {
 .textoSub:hover {
     color: white; /* Cambia el color a blanco al hacer hover */
 }
+
+/* Estilos para las tarjetas de redes sociales */
+.social-cards .card {
+    width: 90px; /* Ancho de cada tarjeta de redes sociales */
+    padding: 15px;
+    margin: 5px; /* Ajusta el margen para que se vean más compactas */
+}
+
+.social-cards .card img {
+    width: 30px; /* Tamaño de las imágenes en tarjetas de redes sociales */
+}
+
+/* Estilos para las tarjetas de beneficios de crédito */
+.benefit-cards .card {
+    width: 150px; /* Ancho de cada tarjeta de beneficios de crédito */
+    padding: 10px;
+    margin: 5px; /* Ajusta el margen para que se vean más compactas */
+}
+
+.benefit-cards .card img {
+    width: 30px; /* Tamaño de las imágenes en tarjetas de beneficios de crédito */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .cards-row {
+        flex-direction: column; /* Cambia la dirección de las tarjetas a columna en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas en pantallas pequeñas */
+    }
+
+    .card {
+        width: 90%; /* Ajusta el ancho de las tarjetas para que sean más compactas en pantallas pequeñas */
+        margin: 5px; /* Reduce el margen entre las tarjetas en pantallas pequeñas */
+    }
+}
+
+/* Estilos para el footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para dispo
 
 
 
