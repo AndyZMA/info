@@ -13,8 +13,15 @@
    
     <style>
               /* Breadcrumb */
-    .breadcrumb {
+              .breadcrumb-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin: 20px;
+        margin-top: 10px;
+    }
+
+    .breadcrumb {
         font-size: 14px;
         color: #333;
     }
@@ -48,6 +55,31 @@
         content: '';
         margin: 0;
     }
+
+
+
+    .breadcrumb2 {
+        font-size: 14px;
+        color: #333;
+        text-align: right;
+    }
+
+    .breadcrumb2 a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb2 strong {
+        font-weight: geomanist-regular;
+        margin-left: 5px;
+    }
+
+    .breadcrumb2 a:first-child::before {
+        content: '';
+        margin: 0;
+    }
+
+
+
     </style>
 
 </head>
@@ -176,6 +208,10 @@
         <strong>Retiro de mi ahorro</strong>
     </div>
         
+
+    <div class="breadcrumb2">
+        <strong>Fecha de última actualización o revisión: 23 de noviembre 2023</strong>
+    </div>
         
         
         
