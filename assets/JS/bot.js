@@ -137,13 +137,13 @@ function handleOption(option) {
         `);
     } else if(option === "Solicitar un retiro"){
         addBotMessage(`
-            <b>Para solicitar un retiro</b>, ingresa o regístrate en <a href="form.html">este enlace</a> y rellena el formulario! 💰.
+            <b>Para solicitar un retiro, ingresa o regístrate en <a href="form.html">este enlace</a> y rellena el formulario! 💰.
             <br>
             <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
     } else if(option === "Consultar mi retiro") {
         addBotMessage(`
-            <b>Para verificar el estatus de tu retiro</b>, ingresa tus datos en <a href="tramite.html">este enlace</a> y rellena el formulario! 💰.
+            <b>Para verificar el estatus de tu retiro, ingresa tus datos en <a href="tramite.html">este enlace</a> y rellena el formulario! 💰.
             <br>
             <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
