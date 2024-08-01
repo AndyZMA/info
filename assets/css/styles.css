@@ -78,13 +78,50 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: center; /* Centrar verticalmente */
 }
 
 .services-section img {
     width: 100%;
-    max-width: 500px;
     border-radius: 8px;
+    object-fit: cover;
+    height: auto;
 }
+
+@media (min-width: 769px) {
+    .services-section {
+        justify-content: center; /* Centrar horizontalmente */
+    }
+
+    .services-section img.small-height-desktop {
+        max-width: 500px; /* Ajustar el ancho máximo */
+        max-height: 500px; /* Ajustar la altura máxima */
+    }
+
+    .services-info {
+        flex: 1 1 auto;
+        margin-left: 20px;
+        max-width: 600px; /* Limitar el ancho de la sección de información */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-section img {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .services-info {
+        flex: 1 1 100%;
+    }
+}
+
+
 
 /* Estilos para la clase ahorro */
 /* Estilos para la clase ahorro */
@@ -317,6 +354,7 @@ p {
     background-color: #F8F8F8;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Agregar borde redondeado a la barra de navegación */
 }
 
 .navbar-lower .navbar-nav {
@@ -330,11 +368,12 @@ p {
 .navbar-lower .nav-item {
     padding: 10px 20px;
     position: relative;
+    border-radius: 8px; /* Agregar borde redondeado a los elementos del menú */
 }
 
 .navbar-lower .nav-item a {
     text-decoration: none;
-    color: black; /* Color negro para los elementos de navbar-lower.desktop-only */
+    color: black;
     font-size: 14px;
     font-weight: normal;
 }
@@ -363,6 +402,8 @@ p {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     width: 200px;
+    border-radius: 8px; /* Agregar borde redondeado al menú desplegable */
+    overflow: hidden; /* Asegurar que los bordes redondeados funcionen correctamente */
 }
 
 .dropdown-menu a {
@@ -372,6 +413,7 @@ p {
     display: block;
     white-space: nowrap;
     font-weight: normal;
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre elementos */
 }
 
 .dropdown-menu a:hover {
@@ -379,18 +421,10 @@ p {
     color: white;
 }
 
-/* Agregar estilo para la línea roja */
+/* Estilo para la línea roja */
 .dropdown-menu {
     border-left: 3px solid red;
     padding-left: 10px;
-}
-
-/* Opcionalmente, puedes ajustar el padding del menú desplegable */
-.dropdown-menu a {
-    display: block;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: black;
 }
 
 /* Mostrar el menú cuando el cursor está sobre .nav-item */
@@ -404,6 +438,7 @@ p {
     background-color: white;
     z-index: 1000;
 }
+
 
 /* Navbar Inferior para Móviles */
 /* Navbar Inferior para Móviles */
@@ -911,4 +946,3 @@ body {
         margin-top: 10px;
     }
 }
-
