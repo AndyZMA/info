@@ -101,7 +101,7 @@ function handleOption(option) {
 
     if (option === "Obtener un crédito") {
         addBotMessage(`
-            <b>Para obtener un crédito Infonavit</b>, debes tener en cuenta la variedad de productos que tenemos para ti, de acuerdo a tus necesidades como:
+            <b>Para obtener un crédito Infonavit,</b> debes tener en cuenta la variedad de productos que tenemos para ti, de acuerdo a tus necesidades como:
             <ul>
                 <li>Comprar una Vivienda (nueva o existente) 🏠</li>
                 <li>Comprar un terreno 🌎</li>
@@ -125,14 +125,14 @@ function handleOption(option) {
         `);
     } else if (option === "Conocer tu ahorro") {
         addBotMessage(`
-            <b>Para consultar cuánto ahorro tienes en la Subcuenta de Vivienda</b>, ingresa o regístrate en <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a>, selecciona "Mi ahorro" y, en seguida, "Cuánto ahorro tengo". Una vez ahí, visualizarás el tipo de ahorro y la Cuenta en la cual está tu ahorro, período y el monto 💰.
+            <b>Para consultar cuánto ahorro tienes en la Subcuenta de Vivienda,</b> ingresa o regístrate en <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a>, selecciona "Mi ahorro" y, en seguida, "Cuánto ahorro tengo". Una vez ahí, visualizarás el tipo de ahorro y la Cuenta en la cual está tu ahorro, período y el monto 💰.
             <br>
             <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
     } else if(option === "Consultar el saldo de tu crédito") {
         addBotMessage(`
             <p>
-                Puedes <b>revisar tu estado de cuenta</b> y descargarlo, solo debes ingresar a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a> en la sección "Mi crédito"
+            Puedes<b>revisar tu estado de cuenta</b> y descargarlo, solo debes ingresar a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a> en la sección "Mi crédito"
             </p>
         `);
     } else if(option === "Solicitar un retiro"){
