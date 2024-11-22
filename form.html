@@ -168,5 +168,52 @@
 
     <script src="assets/JS/form.js"></script>
     <script src="./assets/JS/main.js"></script>
+
+
+    <script>
+        
+    // Funcionalidad del menú para móviles
+    const menuButton = document.getElementById('menuButton');
+    const searchButton = document.getElementById('searchButton');
+    const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+    function closeAllMobileMenus() {
+        mobileDropdownToggles.forEach(function(toggle) {
+            const dropdownMenu = toggle.nextElementSibling;
+            dropdownMenu.classList.remove('open');
+        });
+        const mobileSearch = document.getElementById('mobileSearch');
+        mobileSearch.classList.remove('open');
+    }
+
+    if (menuButton) {
+        menuButton.addEventListener('click', function() {
+            closeAllMobileMenus();
+            const navbarLower = document.getElementById('navbarLower');
+            navbarLower.classList.toggle('open');
+        });
+    }
+
+    if (searchButton) {
+        searchButton.addEventListener('click', function() {
+            closeAllMobileMenus();
+            const mobileSearch = document.getElementById('mobileSearch');
+            mobileSearch.classList.toggle('open');
+        });
+    }
+
+    mobileDropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            closeAllMobileMenus();
+            const dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle('open');
+        });
+    });
+
+    
+
+
+    </script>
+
 </body>
 </html>

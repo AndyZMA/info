@@ -45,27 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Funcionalidad para el cambio de imágenes en el carrusel
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.image-movement img');
-    const totalImages = images.length;
-
-    function showImage(index) {
-        images.forEach((img, i) => {
-            img.style.opacity = i === index ? '1' : '0';
-        });
-    }
-
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        showImage(currentIndex);
-    }
-
-    setInterval(nextImage, 3500); // Cambia de imagen cada 3.5 segundos
-
-    const imageMovementDiv = document.querySelector('.image-movement');
-    imageMovementDiv.addEventListener('mouseover', nextImage);
-
+   
     
 
     // Funcionalidad del menú para móviles

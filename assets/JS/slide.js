@@ -6,13 +6,20 @@ const buttons = document.querySelectorAll('.navigation-buttons button');
 let currentIndex = 0;
 let images; // Grupo de imágenes actual
 let intervalID; // ID del intervalo para poder cancelarlo
-const transitionDuration = 60000; // Duración de la transición en milisegundos (60 segundos)
-const intervalDuration = 60000; // Duración entre cambios de imágenes (60 segundos)
+const transitionDuration = 1000; // Duración de la transición en milisegundos (1 segundo)
+const intervalDuration = 5000; // Duración entre cambios de imágenes (5 segundos)
 
-// Función para limpiar todas las clases 'active' y 'prev' de ambos grupos de imágenes
+// Función para limpiar todas las clases 'active' de ambos grupos de imágenes
 function clearActiveClasses() {
-    desktopImages.forEach(img => img.classList.remove('active', 'prev'));
-    mobileImages.forEach(img => img.classList.remove('active', 'prev'));
+    desktopImages.forEach(img => img.classList.remove('active'));
+    mobileImages.forEach(img => img.classList.remove('active'));
+}
+
+// Función para actualizar el slider
+function updateSlider(images, index) {
+    clearActiveClasses(); // Asegura que solo un grupo tenga imágenes activas
+    images[index].classList.add('active'); // Activa la imagen actual
+    buttons.forEach((btn, i) => btn.classList.toggle('active', i === index)); // Actualiza el botón
 }
 
 // Función para avanzar al siguiente banner en el grupo actual de imágenes
@@ -20,18 +27,17 @@ function nextImage() {
     let previousIndex = currentIndex;
     currentIndex = (currentIndex + 1) % images.length;
 
-    // Añade la clase 'prev' a la imagen anterior y 'active' a la nueva
+    // Añade la clase 'next' a la nueva imagen y 'prev' a la anterior
     images[previousIndex].classList.remove('active');
     images[previousIndex].classList.add('prev');
     images[currentIndex].classList.add('active');
 
-    // Actualiza los botones de navegación
-    buttons.forEach((btn, i) => btn.classList.toggle('active', i === currentIndex));
-
-    // Limpia la clase 'prev' después de que termine la transición
+    // Espera a que termine la transición para limpiar la clase 'prev'
     setTimeout(() => {
         images[previousIndex].classList.remove('prev');
     }, transitionDuration);
+
+    buttons.forEach((btn, i) => btn.classList.toggle('active', i === currentIndex)); // Actualiza el botón
 }
 
 // Configura el grupo de imágenes y el intervalo adecuado según el tamaño de la pantalla
@@ -45,8 +51,10 @@ function setImagesGroup() {
         images = mobileImages;
     }
 
-    clearActiveClasses(); // Limpia las clases activas y previas
-    images[currentIndex].classList.add('active'); // Muestra la primera imagen
+    // Oculta todas las imágenes y muestra solo la actual
+    desktopImages.forEach(img => img.classList.remove('active', 'prev'));
+    mobileImages.forEach(img => img.classList.remove('active', 'prev'));
+    images[currentIndex].classList.add('active');
 
     intervalID = setInterval(nextImage, intervalDuration); // Configura el ciclo para el grupo actual
 }
@@ -69,13 +77,12 @@ buttons.forEach((button, index) => {
         images[previousIndex].classList.add('prev');
         images[currentIndex].classList.add('active');
 
-        // Actualiza los botones de navegación
-        buttons.forEach((btn, i) => btn.classList.toggle('active', i === currentIndex));
-
-        // Limpia la clase 'prev' después de que termine la transición
+        // Espera a que termine la transición para limpiar la clase 'prev'
         setTimeout(() => {
             images[previousIndex].classList.remove('prev');
         }, transitionDuration);
+
+        buttons.forEach((btn, i) => btn.classList.toggle('active', i === currentIndex)); // Actualiza el botón
 
         intervalID = setInterval(nextImage, intervalDuration); // Reinicia el ciclo para el grupo actual
     });

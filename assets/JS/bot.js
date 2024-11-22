@@ -118,7 +118,6 @@ function handleOption(option) {
                 <li>Cumplir con la puntuación mínima requerida de 1080 puntos</li>
                 <li>Utilizar el simulador de crédito</li>
             </ul>
-            <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
         addBotMessage(`
             <b>Regístrate o ingresa a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a></b> donde podrás realizar un ejercicio de precalificación y así saber el monto del crédito al que puedes ser susceptible y comenzar con el trámite de inscripción del crédito.
@@ -127,7 +126,6 @@ function handleOption(option) {
         addBotMessage(`
             <b>Para consultar cuánto ahorro tienes en la Subcuenta de Vivienda,</b> ingresa o regístrate en <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a>, selecciona "Mi ahorro" y, en seguida, "Cuánto ahorro tengo". Una vez ahí, visualizarás el tipo de ahorro y la Cuenta en la cual está tu ahorro, período y el monto 💰.
             <br>
-            <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
     } else if(option === "Consultar el saldo de tu crédito") {
         addBotMessage(`
@@ -139,13 +137,11 @@ function handleOption(option) {
         addBotMessage(`
             <b>Para solicitar un retiro, ingresa o regístrate en <a href="form.html">este enlace</a> y rellena el formulario! 💰.
             <br>
-            <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
     } else if(option === "Consultar mi retiro") {
         addBotMessage(`
-            <b>Para verificar el estatus de tu retiro, ingresa tus datos en <a href="tramite.html">este enlace</a> y rellena el formulario! 💰.
+            <b>Para verificar el estatus de tu retiro, ingresa tus datos en <a href="tramite.html">este enlace</a> y rellena el formulario! Por medio de correo confirmaremos el estatus de tu tramite 💰.
             <br>
-            <i>Consulta más información en este <a href="">enlace</a>.</i>
         `);
     }
 
